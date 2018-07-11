@@ -18,7 +18,7 @@
                 <span class="car-title">购物车</span>
                 <span class="clear" @click="clearAll()">清空</span>
             </div>
-            <div class="food-item" v-for="food in selectFoods" :key="food.id">
+            <div class="food-item" v-for="food in selectFoods" :key="food.id" v-show="food.count!= 0">
                 <span class="food-title">{{food.name}}</span>
                 <span class="food-price">￥{{food.price*food.count}}</span>
                 <carcontrol :foods="food" class="car-control"></carcontrol>
